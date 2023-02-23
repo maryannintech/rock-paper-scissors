@@ -36,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // check who won
-function checkWinner() {
+function showWinner() {
     let win = `You won! You beat the Computer. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     let lose = `You lost! Better luck next time. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     let tie = `It's a tie! \nPlayer: ${userscore} \nComputer: ${computerscore}`;
@@ -64,7 +64,7 @@ function game() {
     }
 
     // display the final winner
-    finalwinner = checkWinner();
+    finalwinner = showWinner();
     return finalwinner;
 }
 
