@@ -55,9 +55,10 @@ function checkWinner() {
 }
 
 function game() {
-    for (i = 0; i < 5; i++) {
+    for (let round = 1; round < 6; round++) {
         let user = prompt("Rock, Paper, or Scissor?");
         let computer = getComputerChoice();
+        console.log(`----Round (${round})---- \nYou chose ${user} \nThe computer ${computer}`);
         playRound(user,computer);
     }
 
