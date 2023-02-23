@@ -59,7 +59,7 @@ function game() {
     for (let round = 1; round < 6; round++) {
         let user = prompt("Rock, Paper, or Scissor?").toLowerCase();
         let computer = getComputerChoice();
-        // display what number of round, what the user and computer chose
+        // display what round it is and what the user and computer chose
         console.log(`----Round (${round})---- \nYou chose ${user} \nThe computer ${computer} \n\n----Results---- \n${playRound(user,computer)}`);
     }
 
