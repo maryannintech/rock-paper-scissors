@@ -1,6 +1,6 @@
+// score values
 let userscore = 0;
 let computerscore = 0;
-
 
 // generate a random choice
 function getComputerChoice() {
@@ -9,7 +9,6 @@ function getComputerChoice() {
     return computerchoice;
 }
 
-// d
 function playRound(playerSelection, computerSelection) {
     playerSelection.toLowerCase();
     let result = ""
