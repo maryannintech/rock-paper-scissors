@@ -1,3 +1,7 @@
+let userscore = 0;
+let computerscore = 0;
+
+
 // generate a random choice
 function getComputerChoice() {
     let selection = ['rock', 'paper', 'scissor'];
@@ -33,18 +37,12 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
-function game() {
-    let user = prompt("Rock, Paper, or Scissor?");
-    let computer = getComputerChoice();
-    let win = `You won! You beat the Computer. ${scoreboard}`;
-    let lose = `You lost! Better luck next time. ${scoreboard}`;
-    let tie = `It's a tie!`
+function checkWinner() {
+    let win = `You won! You beat the Computer. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
+    let lose = `You lost! Better luck next time. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
+    let tie = `It's a tie! \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     let winner = "";
 
-    for (let i = 0; i < 5; i++) {
-        playRound(user,computer);
-    }
-    
     if (userscore > computerscore) {
         winner = win;
     }
@@ -54,12 +52,18 @@ function game() {
     else {
         winner = tie;
     }
-
     return winner;
 }
 
-let userscore = 0;
-let computerscore = 0;
-let scoreboard = `\nPlayer: ${userscore} \nComputer: ${computerscore}`;
+function game() {
+    for (i = 0; i < 5; i++) {
+        let user = prompt("Rock, Paper, or Scissor?");
+        let computer = getComputerChoice();
+        playRound(user,computer);
+    }
+
+    finalwinner = checkWinner();
+    return finalwinner;
+}
 
 console.log(game());
