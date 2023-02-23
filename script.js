@@ -35,6 +35,7 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
+// check who won
 function checkWinner() {
     let win = `You won! You beat the Computer. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     let lose = `You lost! Better luck next time. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
@@ -53,13 +54,16 @@ function checkWinner() {
     return winner;
 }
 
+// start game
 function game() {
     for (let round = 1; round < 6; round++) {
         let user = prompt("Rock, Paper, or Scissor?").toLowerCase();
         let computer = getComputerChoice();
+        // display what number of round, what the user and computer chose
         console.log(`----Round (${round})---- \nYou chose ${user} \nThe computer ${computer} \n\n----Results---- \n${playRound(user,computer)}`);
     }
 
+    // display the final winner
     finalwinner = checkWinner();
     return finalwinner;
 }
