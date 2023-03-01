@@ -15,9 +15,17 @@ const sayings = document.querySelector("#commentary");
 // result
 const results = document.querySelector("#results");
 // eventlisteners
-rock.addEventListener("click", playRound);
-paper.addEventListener("click", playRound);
-scissor.addEventListener("click", playRound);
+rock.addEventListener("click", () => {
+    playRound("rock");
+});
+paper.addEventListener("click", () => {
+    playRound("paper");
+});
+scissor.addEventListener("click", () => {
+    playRound("scissor");
+});
+
+
 
 // generate a random choice
 function getComputerChoice() {
@@ -31,25 +39,31 @@ function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
 
     if (playerSelection == 'rock' && computerSelection == 'paper') {
-        sayings.innerText = "You lost! Paper beat Rock.";   
+        sayings.innerText = "You lost! Paper beat Rock.";
+        ++computerscore;   
     }
     else if (playerSelection == 'rock' && computerSelection == 'scissor') {
-        sayings.innerText = "You won! Rock beat Scissor.";     
+        sayings.innerText = "You won! Rock beat Scissor.";
+        ++userscore;     
     }
     else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        sayings.innerText = "You won! Paper beat Rock.";     
+        sayings.innerText = "You won! Paper beat Rock.";
+        ++userscore;     
     }
     else if (playerSelection == 'paper' && computerSelection == 'scissor') {
-        sayings.innerText = "You lost! Scissor beat Paper.";     
+        sayings.innerText = "You lost! Scissor beat Paper.";
+        ++computerscore;     
     }
     else if (playerSelection == 'scissor' && computerSelection == 'rock') {
-        sayings.innerText = "You lost! Rock beat Scissor.";     
+        sayings.innerText = "You lost! Rock beat Scissor.";
+        ++computerscore;     
     }
     else if (playerSelection == 'scissor' && computerSelection == 'paper') {
-        sayings.innerText = "You won! Scissor beat Paper.";     
+        sayings.innerText = "You won! Scissor beat Paper.";
+        ++userscore;     
     }
     else {
-        sayings.innerText = `Tie. You both chose ${computerSelection}`;
+        sayings.innerText = `Tie. You both chose ${computerSelection}.`;
     }
 
     showWinner();
@@ -71,6 +85,7 @@ function showWinner() {
     else if (computerscore === 5){
         results.innerText = lose;
     }
+
 }
 
 

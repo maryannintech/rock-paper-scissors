@@ -12,7 +12,7 @@ body {
 
 .score-board {
     display: flex;
-    gap: 20px;
+    gap: 180px;
     justify-content: center;
     align-items: center;
     padding-top: 6rem;
@@ -23,19 +23,24 @@ body {
     color:  rgb(247, 182, 63);
 }
 
+.points {
+    display: flex;
+    gap: 5px;
+}
 .instruction {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 15px;
     text-align: center;
+    margin-top: 5rem;
+    font-size: 18px;
 }
 
 .choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
     gap: 10px;
 }
 
