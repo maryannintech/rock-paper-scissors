@@ -56,10 +56,6 @@ function showWinner() {
     return winner;
 }
 
-
-
-
-
 /*
 // start game - 5 rounds
 function game() {
@@ -75,4 +71,11 @@ function game() {
     return finalwinner;
 } */
 
-let computer = getComputerChoice();
+// dom variables
+const compscore = document.querySelector(".comp-points");
+const playscore = document.querySelector(".player-points");
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissor = document.querySelector("#scissor");
+
+

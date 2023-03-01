@@ -10,11 +10,32 @@ body {
     background-color: darkslategray; 
 }
 
+.score-board {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+.comp-points,
+.player-points {
+    color:  rgb(247, 182, 63);
+}
+
+.instruction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+}
+
 .choices {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25rem;
+    margin-top: 3rem;
     gap: 10px;
 }
 
