@@ -1,6 +1,7 @@
 // score values
 let userscore = 0;
 let computerscore = 0;
+let roundnum = 1;
 
 // generate a random choice
 function getComputerChoice() {
@@ -11,6 +12,7 @@ function getComputerChoice() {
 
 // to play one round
 function playRound(playerSelection, computerSelection) {
+    let computerSelection = getComputerChoice();
     let result = ""
     if (playerSelection == 'rock' && computerSelection == 'paper') {
         result = `You lost! Paper beat Rock. \nPlayer: ${userscore} \nComputer: ${++computerscore}`;   
@@ -34,6 +36,7 @@ function playRound(playerSelection, computerSelection) {
         result = `Tie \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     }
 
+    ++roundnum;
     return result;
 }
 
@@ -72,10 +75,14 @@ function game() {
 } */
 
 // dom variables
+//points
 const compscore = document.querySelector(".comp-points");
 const playscore = document.querySelector(".player-points");
+// buttons
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissor = document.querySelector("#scissor");
+// result
+const results = document.querySelector(".results");
 
 
