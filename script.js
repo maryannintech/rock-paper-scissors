@@ -3,6 +3,8 @@ let userscore = 0;
 let computerscore = 0;
 
 // dom variables
+//game screen
+const gamescreen = document.querySelector("#game-screen");
 //points
 let comppoints = document.querySelector(".comp-points");
 let playerpoints = document.querySelector(".player-points");
@@ -14,6 +16,16 @@ const scissor = document.querySelector("#scissor");
 const sayings = document.querySelector("#commentary");
 // result
 const results = document.querySelector("#results");
+//game over screen
+const gameover = document.querySelector("#gameoverscreen");
+// adding elements to game over screen
+const gameoverbtn = document.createElement("button");
+gameoverbtn.textContent = "Play Again?";
+// event listener for game-over button
+gameoverbtn.addEventListener("click", restartGame);
+// hiding game over button
+gameoverbtn.style.visibility = "hidden";
+gameover.appendChild(gameoverbtn);
 // eventlisteners
 rock.addEventListener("click", () => {
     playRound("rock");
@@ -80,16 +92,24 @@ function showWinner() {
 
     if (userscore === 5) {
         results.innerText = win;
+        restartGame();
     }
 
     else if (computerscore === 5){
         results.innerText = lose;
+        restartGame();
     }
 
 }
 
-
-
+// function to hide game screen
+function restartGame() {
+    gameoverbtn.style.visibility = "visible";
+    gamescreen.style.visibility = "hidden";
+    gameover.style.visibility = "visible";
+    userscore = 0;
+    computerscore = 0;
+}
 /*
 // start game - 5 rounds
 function game() {

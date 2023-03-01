@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(210, 147, 30);
+    color: white;
     text-align: center;
 
 }
@@ -74,9 +74,8 @@ button:hover {
     background-color: rgb(247, 182, 63);
 }
 
-.bottomtext {
+#gameoverscreen {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
 }
