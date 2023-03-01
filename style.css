@@ -35,17 +35,25 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
     gap: 10px;
 }
 
-.results {
+#results {
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(210, 147, 30);
     text-align: center;
-    
+
+}
+
+#commentary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 6rem;
 }
 
 button {

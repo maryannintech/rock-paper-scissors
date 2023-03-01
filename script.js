@@ -4,12 +4,14 @@ let computerscore = 0;
 
 // dom variables
 //points
-const comppoints = document.querySelector(".comp-points");
-const playerpoints = document.querySelector(".player-points");
+let comppoints = document.querySelector(".comp-points");
+let playerpoints = document.querySelector(".player-points");
 // buttons
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissor = document.querySelector("#scissor");
+// commentary
+const sayings = document.querySelector("#commentary");
 // result
 const results = document.querySelector("#results");
 
@@ -24,30 +26,29 @@ function getComputerChoice() {
 // to play one round
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
-    let result = ""
+    
     if (playerSelection == 'rock' && computerSelection == 'paper') {
-        result = `You lost! Paper beat Rock. \nPlayer: ${userscore} \nComputer: ${++computerscore}`;   
+        sayings.innerText = "You lost! Paper beat Rock.";   
     }
     else if (playerSelection == 'rock' && computerSelection == 'scissor') {
-        result = `You won! Rock beat Scissor. \nPlayer: ${++userscore} \nComputer: ${computerscore}`;     
+        sayings.innerText = "You won! Rock beat Scissor.";     
     }
     else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        result = `You won! Paper beat Rock. \nPlayer: ${++userscore} \nComputer: ${computerscore}`;     
+        sayings.innerText = "You won! Paper beat Rock.";     
     }
     else if (playerSelection == 'paper' && computerSelection == 'scissor') {
-        result = `You lost! Scissor beat Paper. \nPlayer: ${userscore} \nComputer: ${++computerscore}`;     
+        sayings.innerText = "You lost! Scissor beat Paper.";     
     }
     else if (playerSelection == 'scissor' && computerSelection == 'rock') {
-        result = `You lost! Rock beat Scissor. \nPlayer: ${userscore} \nComputer: ${++computerscore}`;     
+        sayings.innerText = "You lost! Rock beat Scissor.";     
     }
     else if (playerSelection == 'scissor' && computerSelection == 'paper') {
-        result = `You won! Scissor beat Paper. \nPlayer: ${++userscore} \nComputer: ${computerscore}`;     
+        sayings.innerText = "You won! Scissor beat Paper.";     
     }
     else {
-        result = `Tie \nPlayer: ${userscore} \nComputer: ${computerscore}`;
+        sayings.innerText = `Tie. You both chose ${computerSelection}`;
     }
 
-    console.log(computerSelection);
     showWinner();
 
 }
