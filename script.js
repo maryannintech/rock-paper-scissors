@@ -54,7 +54,8 @@ function showWinner() {
     return winner;
 }
 
-// start game
+/*
+// start game - 5 rounds
 function game() {
     for (let round = 1; round < 6; round++) {
         let user = prompt("Rock, Paper, or Scissor?").toLowerCase();
@@ -66,6 +67,6 @@ function game() {
     // display the final winner
     finalwinner = showWinner();
     return finalwinner;
-}
+} */
 
-console.log(game());
+console.log();
