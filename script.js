@@ -1,7 +1,18 @@
 // score values
 let userscore = 0;
 let computerscore = 0;
-let roundnum = 1;
+
+// dom variables
+//points
+const comppoints = document.querySelector(".comp-points");
+const playerpoints = document.querySelector(".player-points");
+// buttons
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissor = document.querySelector("#scissor");
+// result
+const results = document.querySelector("#results");
+
 
 // generate a random choice
 function getComputerChoice() {
@@ -11,7 +22,7 @@ function getComputerChoice() {
 }
 
 // to play one round
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
     let result = ""
     if (playerSelection == 'rock' && computerSelection == 'paper') {
@@ -36,28 +47,32 @@ function playRound(playerSelection, computerSelection) {
         result = `Tie \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     }
 
-    ++roundnum;
-    return result;
+    console.log(computerSelection);
+    showWinner();
+
 }
 
-// check who won
+
+// check and show who won 
 function showWinner() {
-    let win = `You won! You beat the Computer. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
-    let lose = `You lost! Better luck next time. \nPlayer: ${userscore} \nComputer: ${computerscore}`;
-    let tie = `It's a tie! \nPlayer: ${userscore} \nComputer: ${computerscore}`;
-    let winner = "";
+    let win = "You won! You beat the Computer.";
+    let lose = "You lost! Better luck next time.";
+    playerpoints.textContent = userscore;
+    comppoints.textContent = computerscore;
 
-    if (userscore > computerscore) {
-        winner = win;
+    if (userscore === 5) {
+        results.innerText = win;
     }
-    else if (userscore < computerscore) {
-        winner = lose;
+
+    else if (computerscore === 5){
+        results.innerText = lose;
     }
-    else {
-        winner = tie;
-    }
-    return winner;
 }
+
+// eventlisteners
+rock.addEventListener("click", playRound);
+paper.addEventListener("click", playRound);
+scissor.addEventListener("click", playRound);
 
 /*
 // start game - 5 rounds
@@ -74,15 +89,6 @@ function game() {
     return finalwinner;
 } */
 
-// dom variables
-//points
-const compscore = document.querySelector(".comp-points");
-const playscore = document.querySelector(".player-points");
-// buttons
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissor = document.querySelector("#scissor");
-// result
-const results = document.querySelector(".results");
+
 
 

@@ -39,6 +39,15 @@ body {
     gap: 10px;
 }
 
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(210, 147, 30);
+    text-align: center;
+    
+}
+
 button {
     position: relative;
     font-size: 20px;
