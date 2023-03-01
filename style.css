@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-    font-family: 'Press Start 2P', cursive;;
+    font-family: 'Press Start 2P', cursive;
+    background-image: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: contain; 
 }
 
-.square {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #4e7918;
-    border-radius: 20em;
-    gap: 20px;
+button {
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
 }

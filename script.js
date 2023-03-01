@@ -9,6 +9,7 @@ function getComputerChoice() {
     return computerchoice;
 }
 
+// to play one round
 function playRound(playerSelection, computerSelection) {
     let result = ""
     if (playerSelection == 'rock' && computerSelection == 'paper') {
@@ -32,6 +33,7 @@ function playRound(playerSelection, computerSelection) {
     else {
         result = `Tie \nPlayer: ${userscore} \nComputer: ${computerscore}`;
     }
+
     return result;
 }
 
@@ -56,6 +58,8 @@ function showWinner() {
 
 
 
+
+
 /*
 // start game - 5 rounds
 function game() {
@@ -71,4 +75,4 @@ function game() {
     return finalwinner;
 } */
 
-console.log();
+let computer = getComputerChoice();
