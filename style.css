@@ -6,11 +6,27 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: contain; 
+    background-size: 800px;
+    background-color: darkslategray; 
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25rem;
+    gap: 10px;
 }
 
 button {
+    position: relative;
+    font-size: 20px;
     border-radius: 20px;
+    background-color: rgb(210, 147, 30);
     padding: 10px;
     font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+    background-color: rgb(247, 182, 63);
 }
