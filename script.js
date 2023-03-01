@@ -14,7 +14,10 @@ const scissor = document.querySelector("#scissor");
 const sayings = document.querySelector("#commentary");
 // result
 const results = document.querySelector("#results");
-
+// eventlisteners
+rock.addEventListener("click", playRound);
+paper.addEventListener("click", playRound);
+scissor.addEventListener("click", playRound);
 
 // generate a random choice
 function getComputerChoice() {
@@ -26,7 +29,7 @@ function getComputerChoice() {
 // to play one round
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
-    
+
     if (playerSelection == 'rock' && computerSelection == 'paper') {
         sayings.innerText = "You lost! Paper beat Rock.";   
     }
@@ -70,10 +73,7 @@ function showWinner() {
     }
 }
 
-// eventlisteners
-rock.addEventListener("click", playRound);
-paper.addEventListener("click", playRound);
-scissor.addEventListener("click", playRound);
+
 
 /*
 // start game - 5 rounds
