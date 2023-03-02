@@ -52,7 +52,7 @@ function getComputerChoice() {
     return computerchoice;
 }
 
-// to play one round
+// play the game
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
     if (playerSelection == 'rock' && computerSelection == 'paper') {
@@ -98,7 +98,7 @@ function showWinner() {
     if (userscore === 5) {
         results.innerText = win;
         gameoverbtn.style.visibility = "visible";
-        // prevent player to click the buttons again
+        // prevent player from clicking the buttons again
         rock.disabled = true;
         paper.disabled = true;
         scissor.disabled = true;
@@ -107,7 +107,7 @@ function showWinner() {
     else if (computerscore === 5){
         results.innerText = lose;
         gameoverbtn.style.visibility = "visible";
-        // prevent player to click the buttons again
+        // prevent player from clicking the buttons again
         rock.disabled = true;
         paper.disabled = true;
         scissor.disabled = true;
