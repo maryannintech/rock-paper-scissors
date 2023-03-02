@@ -17,7 +17,7 @@ const scissor = document.querySelector("#scissor");
 
 // commentary
 const sayings = document.querySelector("#commentary");
-sayings.textContent = "Pick to start the game";
+sayings.textContent = "Choose to start the game";
 
 // result
 const results = document.querySelector("#results");
