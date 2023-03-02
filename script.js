@@ -8,6 +8,8 @@ const gamescreen = document.querySelector("#game-screen");
 //points
 let comppoints = document.querySelector(".comp-points");
 let playerpoints = document.querySelector(".player-points");
+// assigning 
+
 // buttons
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
@@ -26,6 +28,7 @@ gameoverbtn.addEventListener("click", clickPlaybtn);
 // hiding game over button
 gameoverbtn.style.visibility = "hidden";
 gameover.appendChild(gameoverbtn);
+
 // eventlisteners
 rock.addEventListener("click", () => {
     playRound("rock");
@@ -49,7 +52,6 @@ function getComputerChoice() {
 // to play one round
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
-
     if (playerSelection == 'rock' && computerSelection == 'paper') {
         sayings.innerText = "You lost! Paper beat Rock.";
         ++computerscore;   
@@ -85,14 +87,15 @@ function playRound(playerSelection) {
 
 // check and show who won 
 function showWinner() {
-    let win = "You won! You beat the Computer.";
-    let lose = "You lost! Better luck next time.";
+    let win = "You beat the Computer! \nCongratulations.";
+    let lose = "The Computer won! \nBetter luck next time.";
     playerpoints.textContent = userscore;
     comppoints.textContent = computerscore;
 
     if (userscore === 5) {
         results.innerText = win;
         gameoverbtn.style.visibility = "visible";
+        // prevent player to click the buttons again
         rock.disabled = true;
         paper.disabled = true;
         scissor.disabled = true;
@@ -101,6 +104,7 @@ function showWinner() {
     else if (computerscore === 5){
         results.innerText = lose;
         gameoverbtn.style.visibility = "visible";
+        // prevent player to click the buttons again
         rock.disabled = true;
         paper.disabled = true;
         scissor.disabled = true;
@@ -110,11 +114,11 @@ function showWinner() {
 }
 
 function clickPlaybtn() {
-    playerpoints.textContent = "0";
-    comppoints.textContent = "0";
     rock.disabled = false;
     paper.disabled = false;
     scissor.disabled = false;
+    // restart game
+    window.location.reload();
 }
 
 
