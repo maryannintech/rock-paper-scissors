@@ -22,7 +22,7 @@ const gameover = document.querySelector("#gameoverscreen");
 const gameoverbtn = document.createElement("button");
 gameoverbtn.textContent = "Play Again?";
 // event listener for game-over button
-gameoverbtn.addEventListener("click", restartGame);
+gameoverbtn.addEventListener("click", clickPlaybtn);
 // hiding game over button
 gameoverbtn.style.visibility = "hidden";
 gameover.appendChild(gameoverbtn);
@@ -92,38 +92,31 @@ function showWinner() {
 
     if (userscore === 5) {
         results.innerText = win;
-        restartGame();
+        gameoverbtn.style.visibility = "visible";
+        rock.disabled = true;
+        paper.disabled = true;
+        scissor.disabled = true;
     }
 
     else if (computerscore === 5){
         results.innerText = lose;
-        restartGame();
+        gameoverbtn.style.visibility = "visible";
+        rock.disabled = true;
+        paper.disabled = true;
+        scissor.disabled = true;
     }
+    
 
 }
 
-// function to hide game screen
-function restartGame() {
-    gameoverbtn.style.visibility = "visible";
-    gamescreen.style.visibility = "hidden";
-    gameover.style.visibility = "visible";
-    userscore = 0;
-    computerscore = 0;
+function clickPlaybtn() {
+    playerpoints.textContent = "0";
+    comppoints.textContent = "0";
+    rock.disabled = false;
+    paper.disabled = false;
+    scissor.disabled = false;
 }
-/*
-// start game - 5 rounds
-function game() {
-    for (let round = 1; round < 6; round++) {
-        let user = prompt("Rock, Paper, or Scissor?").toLowerCase();
-        let computer = getComputerChoice();
-        // display what round it is and what the user and computer chose
-        console.log(`----Round (${round})---- \nYou chose ${user} \nThe computer ${computer} \n\n----Results---- \n${playRound(user,computer)}`);
-    }
 
-    // display the final winner
-    finalwinner = showWinner();
-    return finalwinner;
-} */
 
 
 
