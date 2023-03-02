@@ -3,6 +3,8 @@
 This is my first Javascript game, a simple Rock, Paper, Scissor game. This is part of The Odin Project assignment on Javascript basics. I added a user interface by DOM (Document Object Model) manipulation.
 
 ## The game
+A gif of the Rock Paper Scissor
+[gif](/rps%20gif.gif);
 
 ## Credits to the photos used
 
