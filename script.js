@@ -5,19 +5,22 @@ let computerscore = 0;
 // dom variables
 //game screen
 const gamescreen = document.querySelector("#game-screen");
+
 //points
 let comppoints = document.querySelector(".comp-points");
 let playerpoints = document.querySelector(".player-points");
-// assigning 
 
 // buttons
 const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissor = document.querySelector("#scissor");
+
 // commentary
 const sayings = document.querySelector("#commentary");
+
 // result
 const results = document.querySelector("#results");
+
 //game over screen
 const gameover = document.querySelector("#gameoverscreen");
 // adding elements to game over screen
@@ -29,7 +32,7 @@ gameoverbtn.addEventListener("click", clickPlaybtn);
 gameoverbtn.style.visibility = "hidden";
 gameover.appendChild(gameoverbtn);
 
-// eventlisteners
+// eventlisteners for buttons
 rock.addEventListener("click", () => {
     playRound("rock");
 });
@@ -113,10 +116,8 @@ function showWinner() {
 
 }
 
+// function to play again
 function clickPlaybtn() {
-    rock.disabled = false;
-    paper.disabled = false;
-    scissor.disabled = false;
     // restart game
     window.location.reload();
 }

@@ -27,6 +27,7 @@ body {
     display: flex;
     gap: 5px;
 }
+
 .instruction {
     display: flex;
     justify-content: center;

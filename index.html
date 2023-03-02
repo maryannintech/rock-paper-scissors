@@ -11,36 +11,37 @@
 <body>
 
     <section class="scoreboard">
-    <div class="score-board">
-        <div class="points">
-        <p class="compscore">Computer:</p>
-        <p class="comp-points">0</p>
+        <div class="score-board">
+            <div class="points">
+                <p class="compscore">Computer:</p>
+                <p class="comp-points">0</p>
+            </div>
+            <div class="points">
+                <p class="playerscore">Player:</p>
+                <p class="player-points">0</p>
+            </div>
         </div>
-        <div class="points">
-        <p class="playerscore">Player:</p>
-        <p class="player-points">0</p>
-        </div>
-    </div>
-</section>
+    </section>
+
     <section class="game-screen">
         <div id="game-screen">
-        <div class="instruction">
-            <p>Let's see who gets <br>5 points first.</p>
+            <div class="instruction">
+                <p>Let's see who gets <br>5 points first.</p>
+            </div>
+            <div class="choices">
+                <button id="rock" type="button">Rock</button>
+                <button id="paper" type="button">Paper</button>
+                <button id="scissor" type="button">Scissors</button>
+            </div>
+            <div id="commentary"></div>
+            <div id="results"></div>
         </div>
-        <div class="choices">
-            <button id="rock" type="button">Rock</button>
-            <button id="paper" type="button">Paper</button>
-            <button id="scissor" type="button">Scissors</button>
-        </div>
-
-        <div id="commentary"></div>
-        <div id="results"></div>
-    </div>
     </section>
 
     <section class="gameover">
         <div id="gameoverscreen">
         </div>
     </section>
+    
 </body>
 </html>
