@@ -4,7 +4,7 @@ This is my first Javascript game, a simple Rock, Paper, Scissor game. This is pa
 
 ## The game
 A gif of the Rock Paper Scissor
-![gif](/rps%20gif.gif)
+![gif](/rps-gif.gif)
 
 ## Credits to the photos used
 
